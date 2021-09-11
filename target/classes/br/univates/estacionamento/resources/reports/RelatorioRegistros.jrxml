@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioRegistros" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="834078be-8dae-498c-b67f-6a2fcfa829c9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Estacionamento_PostgreSQL"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from movimento]]>
+	</queryString>
+	<field name="idmovimento" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idmovimento"/>
+		<property name="com.jaspersoft.studio.field.label" value="idmovimento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="movimento"/>
+	</field>
+	<field name="dt_inicio" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dt_inicio"/>
+		<property name="com.jaspersoft.studio.field.label" value="dt_inicio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="movimento"/>
+	</field>
+	<field name="dt_fim" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dt_fim"/>
+		<property name="com.jaspersoft.studio.field.label" value="dt_fim"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="movimento"/>
+	</field>
+	<field name="veiculo_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="veiculo_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="veiculo_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="movimento"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="4" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="535" height="45" uuid="7d3f1715-d149-461d-8f35-6e2f4dad51ef"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Listagem de Registros]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="140" y="0" width="190" height="30" uuid="7563dc91-89f8-4250-92ed-ffcc9bb6e221">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1cdf4f37-ba5e-41af-a672-3af9971c9bca"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Registro de Entrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="1" width="160" height="30" uuid="570ee365-5f08-478b-b6ec-07eb413527b9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="52e9adec-2de8-4684-958b-d82422e355e2"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Registro de Saída]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="130" height="30" uuid="ce5d3715-2f21-4969-bcfb-98a0fdd72d28">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="afd0f15b-37b9-40b9-98fa-587559730df5"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="140" y="0" width="190" height="30" uuid="d03a9e6e-20eb-49b1-a19a-642b4ed3c4ed">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1cdf4f37-ba5e-41af-a672-3af9971c9bca"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Arial Black" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dt_inicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="0" width="160" height="30" uuid="64625a8a-4a43-484a-978b-23a4306353db">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="52e9adec-2de8-4684-958b-d82422e355e2"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dt_fim}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="130" height="30" uuid="492d2218-111f-40b0-acde-a13717f4e113">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="afd0f15b-37b9-40b9-98fa-587559730df5"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Arial Black" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idmovimento}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

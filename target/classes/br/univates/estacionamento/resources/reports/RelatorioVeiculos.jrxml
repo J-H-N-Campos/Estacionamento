@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioVeiculos" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6d1a03ee-5644-4b60-9062-30c64446f7ee">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Estacionamento_PostgreSQL"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from veiculo]]>
+	</queryString>
+	<field name="idveiculo" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idveiculo"/>
+		<property name="com.jaspersoft.studio.field.label" value="idveiculo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="veiculo"/>
+	</field>
+	<field name="placa" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="placa"/>
+		<property name="com.jaspersoft.studio.field.label" value="placa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="veiculo"/>
+	</field>
+	<field name="modelo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="modelo"/>
+		<property name="com.jaspersoft.studio.field.label" value="modelo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="veiculo"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="10" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="0" width="400" height="43" uuid="149e6e40-d0fd-4a54-9d65-4337fc80e38c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="24"/>
+				</textElement>
+				<text><![CDATA[Listagem de Veículos]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="19ce6990-a20f-4de0-a904-059af4c1854b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4df510a4-4c13-4f7e-8b69-7759ca9b5c15"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="0" width="100" height="30" uuid="247e23a8-7274-4c9e-828a-4d9b0623aef5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2e7d8c3b-d130-4046-8fad-5d911cbd9188"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Placa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="100" height="30" uuid="44cea760-7fed-4b33-9d6b-cc4317530be9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b63b77ae-8733-48db-834a-01ad8e9ecf52"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Modelo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="5a56060e-7315-41d8-b3d9-7081884686e9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4df510a4-4c13-4f7e-8b69-7759ca9b5c15"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idveiculo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="0" width="100" height="30" uuid="536da95d-0757-4b78-8dbd-bf49893521d7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2e7d8c3b-d130-4046-8fad-5d911cbd9188"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{placa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="100" height="30" uuid="d3122364-e2e5-4925-9516-76fa96b66114">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b63b77ae-8733-48db-834a-01ad8e9ecf52"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{modelo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

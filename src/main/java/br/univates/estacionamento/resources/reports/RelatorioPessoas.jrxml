@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioPessoas" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="53a3d3ff-bd91-4b30-a16f-2403885d9dab">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Estacionamento_PostgreSQL"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from pessoa]]>
+	</queryString>
+	<field name="idpessoa" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idpessoa"/>
+		<property name="com.jaspersoft.studio.field.label" value="idpessoa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoa"/>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoa"/>
+	</field>
+	<field name="endereco" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="endereco"/>
+		<property name="com.jaspersoft.studio.field.label" value="endereco"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoa"/>
+	</field>
+	<field name="cpf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cpf"/>
+		<property name="com.jaspersoft.studio.field.label" value="cpf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoa"/>
+	</field>
+	<field name="idade" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idade"/>
+		<property name="com.jaspersoft.studio.field.label" value="idade"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoa"/>
+	</field>
+	<field name="vip_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="vip_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="vip_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoa"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="8" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="0" width="400" height="45" uuid="b7e247d5-d568-495c-953b-bf5c8f96063b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="24"/>
+				</textElement>
+				<text><![CDATA[Listagem de Pessoas]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="134c7d88-9197-4c64-b081-096a9f73829e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ecd319ca-2a9d-4003-aa58-8c38a3062437"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="0" width="160" height="30" uuid="a9a830f3-47f5-466c-8136-754c6b75254a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c6932bbf-04e9-4076-84c8-6d3f34eebb4a"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="0" width="170" height="30" uuid="098eaf2e-cfc4-458d-b7df-fce83b825a9f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1646fc67-1cbf-4994-9d3b-ba2ef83fbb08"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Endereço]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="1a3b2843-a686-4b24-b63f-db5e441497d5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ecd319ca-2a9d-4003-aa58-8c38a3062437"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idpessoa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="0" width="160" height="30" uuid="64e47bf5-773a-4793-8ae4-8f4651b33319">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c6932bbf-04e9-4076-84c8-6d3f34eebb4a"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="0" width="170" height="30" uuid="16393d68-f4ad-4396-a30f-b2e5571bd0e3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1646fc67-1cbf-4994-9d3b-ba2ef83fbb08"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{endereco}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
